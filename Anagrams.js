@@ -1,29 +1,26 @@
-let str1="hello";
-let str2="ollhe"
+let str1="silent";
+let str2="ildften"
 
-function Anagram(str){
-    let temp=""
-    let arr=str.split("")
-    for(let i=0;i<arr.length;i++){
-        for(let j=i+1;j<arr.length;j++){
-            if(arr[i]>arr[j]){
-                temp=arr[i];
-                arr[i]=arr[j];
-                arr[j]=temp;
+function Sort(str){
+    let data=str
+    for(let i=0;i<data.length;i++){
+        for(let j=i+1;j<data.length;j++){
+            if(data[i]>data[j]){
+                let temp=data[i];
+                data[i]=data[j];
+                data[j]=temp;
             }
-             
         }
     }
-    return arr.join("");
+    return data
 }
 
-let data1=Anagram(str1);
-console.log(data1)
-let data2=Anagram(str2);
-console.log(data2)
-if(data1===data2){
-    console.log("Anagram strings")
+let datas=Sort(str1);
+console.log("dt",datas)
+let data1=Sort(str2);
+if(data===data1){
+   console.log("Both string are anagrams");
 }
 else{
-    console.log("Non Anagrams")
+    console.log("Both string are not anagrmas")
 }
